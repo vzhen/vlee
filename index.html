@@ -247,10 +247,10 @@
                         document.write("</div>")
                         document.write("<img src=\"img/portfolio/" + projectThumb[i].filename + ".jpg\" class=\"img-responsive\">")
                         document.write("</a>")
-                        document.write("<div class=\"portfolio-caption\">")
-                        document.write("<h4>Bangalow Renovation</h4>")
-                        document.write("<p class=\"text-muted\">Bukit Rimau</p>")
-                        document.write("</div>")
+                        // document.write("<div class=\"portfolio-caption\">")
+                        // document.write("<h4>Bangalow Renovation</h4>")
+                        // document.write("<p class=\"text-muted\">Bukit Rimau</p>")
+                        // document.write("</div>")
                         document.write("</div>")
                     }
                     //]]>
@@ -613,29 +613,31 @@
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
     <!-- Loop Portfolio Modal -->
-    <!--<script type="text/javascript" >
-    </script>-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <img class="img-responsive img-centered" src="img/portfolio/large/project1.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script type="text/javascript">
+    for (var i = 0; i < projectThumb.length; i++) {
+        document.write("<div class=\"portfolio-modal modal fade\" id=\"portfolioModal" + projectThumb[i].id + "\"tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">")
+        document.write("<div class=\"modal-dialog\">")
+        document.write("<div class=\"modal-content\">")
+        document.write("<div class=\"close-modal\" data-dismiss=\"modal\">")
+        document.write("<div class=\"lr\">")
+        document.write("<div class=\"rl\">")
+        document.write("</div>")
+        document.write("</div>")
+        document.write("</div>")
+        document.write("<div class=\"container\">")
+        document.write("<div class=\"row\">")
+        document.write("<div class=\"col-lg-8 col-lg-offset-2\">")
+        document.write("<div class=\"modal-body\">")
+        document.write("<img class=\"img-responsive img-centered\" src=\"img/portfolio/large/" + projectThumb[i].filename + ".jpg\">")
+        document.write("</div>")
+        document.write("</div>")
+        document.write("</div>")
+        document.write("</div>")
+        document.write("</div>")
+        document.write("</div>")
+        document.write("</div>")
+    }
+    </script>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
